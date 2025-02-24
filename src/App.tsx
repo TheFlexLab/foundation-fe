@@ -12,7 +12,6 @@ import ReactGA from 'react-ga4';
 import LocationService from './utils/LocationService';
 const TRACKING_ID = 'G-3TVZ4YD2FG';
 
-
 function App() {
   const location = useLocation();
   const persistedTheme = useSelector((state: any) => state.utils.theme);
