@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" class="bg-white no-scrollbar dark:bg-black">
+  <head>
+    <!-- HTML Meta Tags -->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/fav64.svg" />
+
+    <meta name="theme-color" content="#000000" />
+
+    <!-- --------------------------------------------------------------------------------------------- -->
+    <title>Foundation</title>
+    <meta name="title" content="Foundation" />
+    <meta name="description" content="A revolutionary new social platform. Own your data. Get rewarded." />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://on.foundation" />
+    <meta property="og:title" content="Foundation" />
+    <meta property="og:description" content="A revolutionary new social platform. Own your data. Get rewarded." />
+    <meta property="og:image" content="https://foundation-seo.s3.amazonaws.com/seo-logo-v2.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image"> 
+    <meta property="twitter:url" content="https://on.foundation" />
+    <meta name="twitter:title" content="Foundation" />
+    <meta name="twitter:description" content="A revolutionary new social platform. Own your data. Get rewarded." />
+    <meta name="twitter:image" content="https://foundation-seo.s3.amazonaws.com/seo-logo-v2.png" />
+
+    <!-- Farcaster Frames -->
+    <!-- Farcaster meta tags -->
+    <meta property="fc:frame" content="vNext" />
+    <meta property="fc:frame:image" content="https://foundation-seo.s3.amazonaws.com/seo-logo-v2.png" />
+    <meta property="fc:frame:button:1" content="Explore Foundation" />
+    <meta property="fc:frame:button:1:action" content="link" />
+    <meta property="fc:frame:button:1:target" content="https://on.foundation" />
+    <!-- --------------------------------------------------------------------------------------------- -->
+
+    <!-- Light Theme Favicon -->
+    <link rel="icon" type="image/svg" sizes="32x32" href="/fav32.svg" />
+    <link rel="icon" type="image/svg" sizes="64x64" href="/fav64.svg" />
+    <link rel="icon" type="image/svg" sizes="96x96" href="/fav96.svg" />
+
+    <!-- Dark Theme Favicon -->
+    <!-- <link rel="icon" type="image/png" sizes="64x64" href="/fav64a.png" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav32a.png" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/fav96a.png" media="(prefers-color-scheme: dark)" /> -->
+
+    <!-- Fallback Favicon (for browsers that do not support media queries) -->
+    <link rel="icon" type="image/svg+xml" sizes="64x64" href="/light-64.svg" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.4, user-scalable=yes" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://w.soundcloud.com/player/api.js"></script>
+  </head>
+
+  <body className="dark">
+    <div id="root"></div>
+    <!-- Add script for checking and reloading page -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Check if the browser is Safari
+        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+        if (!isSafari) {
+          let isReloading = false;
+
+          const checkContent = function () {
+            // Check if the main element is empty or has unexpected content
+            const mainElement = document.querySelector('#root'); // Change '#root' to your main container selector
+
+            if (!mainElement || mainElement.innerHTML.trim() === '') {
+              // Reload the page if main content is missing or empty, and ensure it's not already reloading
+              if (!isReloading) {
+                isReloading = true;
+                window.location.reload();
+              }
+            }
+          };
+
+          // Use the `load` event to ensure all resources have been loaded
+          window.addEventListener('load', function () {
+            setTimeout(checkContent, 100); // Adjust the delay as needed
+          });
+        }
+      });
+    </script>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
