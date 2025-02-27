@@ -10,11 +10,10 @@ CVV: 123
 -->
 
 <!-- Sample Card Stripe-->
+
 <!--
 Card Type: Visa
 Card Number: 4242 4242 4242 4242
 Expiration Date: 12/28
 CVV: 123
--->
-
-https://drive.google.com/file/d/1hKvHEnhQOwPpZd0VcWlKyau98ddMmoeK/view?usp=sharing
+--
